@@ -981,7 +981,7 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("CA-CFAR、GOCA-CFAR、SOCA-CFAR 对比演示程序")
+st.title("CA-CFAR、GOCA-CFAR、SOCA-CFAR 对比演示")
 
 st.markdown(
     """
