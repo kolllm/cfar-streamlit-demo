@@ -273,7 +273,7 @@ def parse_targets(df: pd.DataFrame, n_bins: int) -> List[Target]:
     for _, row in df.iterrows():
         enabled = bool(row.get("启用", True))
         center = safe_int(row.get("中心距离单元", n_bins // 2), n_bins // 2)
-        snr = safe_float(row.get("目标SNR/dB", 15.0), 15.0)
+        snr = safe_float(row.get("目标SNR/dB", 12.0), 12.0)
         width = max(safe_float(row.get("宽度/单元", 1.0), 1.0), 0.1)
         model = str(row.get("目标模型", "单点"))
         targets.append(Target(enabled, center, snr, width, model))
@@ -1068,7 +1068,7 @@ st.subheader("1. 自主设置目标")
 
 default_targets = pd.DataFrame([
     {"启用": True, "中心距离单元": 180, "目标SNR/dB": 18.0, "宽度/单元": 1.0, "目标模型": "单点"},
-    {"启用": True, "中心距离单元": 188, "目标SNR/dB": 15.0, "宽度/单元": 1.0, "目标模型": "单点"},
+    {"启用": True, "中心距离单元": 188, "目标SNR/dB": 12.0, "宽度/单元": 1.0, "目标模型": "单点"},
     {"启用": False, "中心距离单元": 260, "目标SNR/dB": 12.0, "宽度/单元": 8.0, "目标模型": "高斯扩展"},
 ])
 
