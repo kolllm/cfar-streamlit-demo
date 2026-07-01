@@ -1041,7 +1041,7 @@ with st.sidebar:
         "实验次数",
         min_value=1,
         max_value=500,
-        value=20,
+        value=100,
         step=1,
         help="点击主页面按钮后，程序会按该次数自动重复生成随机距离像并刷新结果。",
     )
